@@ -1,0 +1,1 @@
+console.log("Test file for Day 1 loaded successfully.");

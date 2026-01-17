@@ -32,3 +32,22 @@ console.table([accountID, accountEmail, accountPassword, account_city,account_st
 
 console.log(typeof null); // object (this is a known quirk in JavaScript)
 console.log(typeof undefined);
+
+
+//Datatype conversion confusion
+
+let age = "23abc";
+
+let Value = Number(age); // Converts string to number
+console.log(typeof Value); // number
+console.log(Value); // NaN (Not a Number because "23abc" cannot be converted to a valid number)
+
+let score = null;
+
+let scoreValue = Number(score); // Converts null to number
+console.log(typeof scoreValue); // number
+console.log(scoreValue); // 0 (null is converted to 0)
+
+// In case of number to boolean conversion , 0 is converted to false and any non zero number is converted to true.
+
+// " "==> false , "hello"==> true

@@ -92,3 +92,21 @@ console.log(undefined<0); // false
 // Strict equality operator(===) vs Abstract equality operator(==)
 
 console.log(1==="1"); // false , because === checks for both value and datatype
+
+
+//Summary of Datatypes
+
+//objects
+
+let myObject = {
+    name: "Ishita",
+    age: 25,
+    isStudent: true
+};
+
+//Functions
+ const myFunction = function(){
+    console.log("Hello from myFunction!");
+ }
+
+    myFunction();

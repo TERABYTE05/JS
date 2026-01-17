@@ -68,3 +68,27 @@ console.log(1+2+"3"); // "33" (1 and 2 are added to get 3, then 3 is converted t
 console.log(true);
 console.log(+true); // 1 (boolean true is converted to number 1)
 //console.log(true+);// will give error
+
+
+
+// Comparison of datatypes
+
+console.log(1=="1"); 
+
+console.log(null>0); // false
+console.log(null==0); // false
+console.log(null>=0); // true
+
+// the reason is that an equality check(==) and comparisons > < >= <= work differently in JS.
+// Comparisons convert null to number 0 for comparison, but equality check does not convert null to any value and considers it as a unique value. Hence null==0 is false but null>=0 is true.
+
+console.log(undefined==0); // false
+console.log(undefined>0); // false
+console.log(undefined<0); // false
+
+// Similar to null, undefined is also treated as a unique value in equality checks and does not convert to any number for comparisons. Hence all comparisons with undefined return false except undefined==undefined which is true.
+
+
+// Strict equality operator(===) vs Abstract equality operator(==)
+
+console.log(1==="1"); // false , because === checks for both value and datatype

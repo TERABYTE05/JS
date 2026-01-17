@@ -51,3 +51,20 @@ console.log(scoreValue); // 0 (null is converted to 0)
 // In case of number to boolean conversion , 0 is converted to false and any non zero number is converted to true.
 
 // " "==> false , "hello"==> true
+
+
+// Why string to number is confusing?
+
+let str1 = "Hello";
+let str2 = "World";
+let str3 = str1+str2;
+console.log(str3); // HelloWorld (string concatenation)
+
+console.log(1+"2"); // "12" (number 1 is converted to string and concatenated)
+console.log("1"+2); // "12" (number 2 is converted to string and concatenated)
+console.log("1"+2+3); // "123" (2 is converted to string and concatenated with "1", then 3 is also converted to string and concatenated)
+console.log(1+2+"3"); // "33" (1 and 2 are added to get 3, then 3 is converted to string and concatenated)
+
+console.log(true);
+console.log(+true); // 1 (boolean true is converted to number 1)
+//console.log(true+);// will give error

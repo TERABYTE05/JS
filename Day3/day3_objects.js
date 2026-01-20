@@ -32,3 +32,29 @@ console.log(Object.values(InstaUser)); // get all values
 console.log(Object.entries(InstaUser)); // get all entries as [key, value] pairs
 
 console.log(InstaUser.hasOwnProperty('bio')); // true
+
+
+// Object destructuring and JSON API intro
+
+const course ={
+    courseName: "JavaScript Basics",
+    duration: "4 weeks",
+    level: "Beginner",
+    instructor: {
+        name: "Alice Johnson",
+        experience: "5 years"
+    }
+}
+
+const  {courseName : CName}= course; // object destructuring
+console.log(CName); // JavaScript Basics
+
+
+// JSON API
+
+//format in which data is sent by APIs over the internet
+// {
+//     name:"Ishita",
+//     age:21,
+//     hobbies:['reading', 'traveling', 'coding']
+// }

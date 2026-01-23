@@ -65,3 +65,5 @@ for(const key of map){
 for(const [key,values] of map){
     console.log(`Key is: ${key} and Value is: ${values}`);
 }
+
+

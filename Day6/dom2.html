@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    
+    <title>DOM Manipulation Example</title>
+    
+
+</head>
+<body style="background-color: lightblue; color: darkblue;">
+    <div class="parent">
+        <div class = "day">Monday</div>
+        <div class = "day">Tuesday</div>
+        <div class = "day">Wednesday</div>
+        <div class = "day">Thursday</div>
+</div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[2].innerHTML);
+
+    // for(let i=0; i<parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    // parent.children[1].style.color = "red";
+    // console.log(parent.firstElementChild);
+
+    const day1 = document.querySelector('.day');
+    
+    console.log(day1.parentElement);
+
+    console.log("Nodes:", parent.childNodes); // includes text nodes
+    
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body >
+    <h1>Async Projects</h1>
+    <button id="start">Start</button>
+    <button id ="stop">Stop</button>
+
+</body>
+<script>
+
+    //setTImeout and setInterval are not core part of JavaScript, they are part of the Web APIs provided by the browser. They allow you to schedule functions to be executed after a certain delay (setTimeout) or repeatedly at specified intervals (setInterval).
+    // setTimeout(function(){
+    //     console.log("This is a delayed message");
+    // },2000);
+
+    const Delay_Message = function(){
+        console.log("This is a delayed message");
+    }
+    setTimeout(Delay_Message, 2000);// Note: The function is passed as a reference without parentheses, so it will be called after the specified delay.
+ 
+    const changeText = function(){
+        document.querySelector('h1').innerHTML= "Async Projects - Updated";
+    }
+    const ChangeMe = setTimeout(changeText, 3000);
+    //clearTimeout(ChangeMe);
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(ChangeMe);
+        console.log("Timeout cleared, text will not change");
+    })
+</script>
+</html>

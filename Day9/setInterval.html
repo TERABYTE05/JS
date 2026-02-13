@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body >
+    <h1>Async Projects</h1>
+    <button id="start">Start</button>
+    <button id ="stop">Stop</button>
+
+</body>
+<script>
+let intervalId = null;   // not const
+
+const sayDate = function(str){
+    console.log(str, Date.now());
+}
+
+document.querySelector('#start').addEventListener('click', function () {
+    if (!intervalId) {  // prevents multiple intervals
+        intervalId = setInterval(sayDate, 2000, "hi");
+        console.log("Interval started");
+    }
+});
+
+document.querySelector('#stop').addEventListener('click', function () {
+    clearInterval(intervalId);
+    intervalId = null;  // reset
+    console.log("Interval stopped");
+});
+
+</script>
+</html>
